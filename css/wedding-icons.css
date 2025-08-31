@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/**
+ * Wedding Icons CSS
+ * Custom wedding icon set for David & Emma-jo's wedding website
+ * Uses CSS masks with SVG images to inherit colors like font icons
+ */
+
+/* Base wedding icon classes */
+[class^="wedding-icon-"]:before,
+[class*=" wedding-icon-"]:before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  vertical-align: middle;
+  line-height: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Color inheritance for wedding icons in wedding-details context */
+.wedding-details [class^="wedding-icon-"]:before,
+.wedding-details [class*=" wedding-icon-"]:before {
+  filter: invert(57%) sepia(7%) saturate(745%) hue-rotate(15deg) brightness(94%) contrast(86%);
+}
+
+/* Wedding Icon 1 - Wedding Couple */
+.wedding-icon-couple:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon1.svg");
+}
+
+/* Wedding Icon 2 */
+.wedding-icon-2:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon2.svg");
+}
+
+/* Wedding Icon 3 */
+.wedding-icon-3:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon3.svg");
+}
+
+/* Wedding Icon 4 */
+.wedding-icon-4:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon4.svg");
+}
+
+/* Wedding Icon 5 */
+.wedding-icon-5:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon5.svg");
+}
+
+/* Wedding Icon 6 */
+.wedding-icon-6:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon6.svg");
+}
+
+/* Wedding Icon 7 */
+.wedding-icon-7:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon7.svg");
+}
+
+/* Wedding Icon 8 */
+.wedding-icon-8:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon8.svg");
+}
+
+/* Wedding Icon 9 */
+.wedding-icon-9:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon9.svg");
+}
+
+/* Wedding Icon 10 */
+.wedding-icon-10:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon10.svg");
+}
+
+/* Wedding Icon 11 */
+.wedding-icon-11:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon11.svg");
+}
+
+/* Wedding Icon 12 */
+.wedding-icon-12:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon12.svg");
+}
+
+/* Wedding Icon 13 */
+.wedding-icon-13:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon13.svg");
+}
+
+/* Wedding Icon 14 */
+.wedding-icon-14:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon14.svg");
+}
+
+/* Wedding Icon 15 */
+.wedding-icon-15:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon15.svg");
+}
+
+/* Wedding Icon 16 */
+.wedding-icon-16:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon16.svg");
+}
+
+/* Wedding Icon 17 */
+.wedding-icon-17:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon17.svg");
+}
+
+/* Wedding Icon 18 */
+.wedding-icon-18:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon18.svg");
+}
+
+/* Wedding Icon 19 */
+.wedding-icon-19:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon19.svg");
+}
+
+/* Wedding Icon 20 */
+.wedding-icon-20:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon20.svg");
+}
+
+/* Wedding Icon 21 */
+.wedding-icon-21:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon21.svg");
+}
+
+/* Wedding Icon 22 */
+.wedding-icon-22:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon22.svg");
+}
+
+/* Wedding Icon 23 */
+.wedding-icon-23:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon23.svg");
+}
+
+/* Wedding Icon 24 */
+.wedding-icon-24:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon24.svg");
+}
+
+/* Wedding Icon 25 */
+.wedding-icon-25:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon25.svg");
+}
+
+/* Wedding Icon 26 */
+.wedding-icon-26:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon26.svg");
+}
+
+/* Wedding Icon 27 */
+.wedding-icon-27:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon27.svg");
+}
+
+/* Wedding Icon 28 */
+.wedding-icon-28:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon28.svg");
+}
+
+/* Wedding Icon 29 */
+.wedding-icon-29:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon29.svg");
+}
+
+/* Wedding Icon 30 */
+.wedding-icon-30:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon30.svg");
+}
+
+/* Wedding Icon 31 */
+.wedding-icon-31:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon31.svg");
+}
+
+/* Wedding Icon 32 */
+.wedding-icon-32:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon32.svg");
+}
+
+/* Wedding Icon 33 */
+.wedding-icon-33:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon33.svg");
+}
+
+/* Wedding Icon 34 */
+.wedding-icon-34:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon34.svg");
+}
+
+/* Wedding Icon 35 */
+.wedding-icon-35:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon35.svg");
+}
+
+/* Wedding Icon 36 */
+.wedding-icon-36:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon36.svg");
+}
+
+/* Wedding Icon 37 */
+.wedding-icon-37:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon37.svg");
+}
+
+/* Wedding Icon 38 */
+.wedding-icon-38:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon38.svg");
+}
+
+/* Wedding Icon 39 */
+.wedding-icon-39:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon39.svg");
+}
+
+/* Wedding Icon 40 */
+.wedding-icon-40:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon40.svg");
+}
+
+/* Wedding Icon 41 */
+.wedding-icon-41:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon41.svg");
+}
+
+/* Wedding Icon 42 */
+.wedding-icon-42:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon42.svg");
+}
+
+/* Wedding Icon 43 */
+.wedding-icon-43:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon43.svg");
+}
+
+/* Wedding Icon 44 */
+.wedding-icon-44:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon44.svg");
+}
+
+/* Wedding Icon 45 */
+.wedding-icon-45:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon45.svg");
+}
+
+/* Wedding Icon 46 */
+.wedding-icon-46:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon46.svg");
+}
+
+/* Wedding Icon 47 */
+.wedding-icon-47:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon47.svg");
+}
+
+/* Wedding Icon 48 */
+.wedding-icon-48:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon48.svg");
+}
+
+/* Wedding Icon 49 */
+.wedding-icon-49:before {
+  background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon49.svg");
+}
+
+/* Utility classes for different sizes */
+.wedding-icon-sm {
+  font-size: 0.875em;
+}
+
+.wedding-icon-lg {
+  font-size: 1.333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.wedding-icon-2x {
+  font-size: 2em;
+}
+
+.wedding-icon-3x {
+  font-size: 3em;
+}
+
+.wedding-icon-4x {
+  font-size: 4em;
+}
+
+.wedding-icon-5x {
+  font-size: 5em;
+}
+
+/* Color override utility classes (if needed) */
+.wedding-icon-primary {
+  color: #928777;
+}
+
+.wedding-icon-light {
+  color: #fff;
+}
+
+.wedding-icon-dark {
+  color: #333;
+}
