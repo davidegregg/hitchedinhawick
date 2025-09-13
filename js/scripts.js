@@ -241,24 +241,34 @@ var Neela;
 
             if ($("#wrapper > section, #wrapper > div#hero").length !== 0 && $_self.onepageNav && jQuery().waypoint) {
                 $("#wrapper > section, #wrapper > div#hero").waypoint({
-                    element: $("#wrapper > section"),
                     handler: function (direction) {
-                        var $elem = $(this);
-                        var id = $elem[0].element.id;
-
-                        if (direction === "up") {
-                            id = $elem[0].element.previousElementSibling.id;
+                        var activeElement = this.element;
+                        if (direction === 'up') {
+                            activeElement = this.element.previousElementSibling;
                         }
 
-                        $(".nav a").removeClass("active");
+                        var id = 'hero'; // Default to hero
+                        if (activeElement) {
+                            id = activeElement.id;
+                        }
 
-                        if ($(window).scrollTop() < 100) {
-                            $(".nav a[href=\"#hero\"]").addClass("active");
-                        } else {
+                        // Only update navigation if we have a valid section to highlight
+                        if (id && $(".nav a[href=\"#" + id + "\"]").length > 0) {
+                            $(".nav a").removeClass("active");
                             $(".nav a[href=\"#" + id + "\"]").addClass("active");
                         }
                     },
                     offset: "50%"
+                });
+
+                // Handle the case when user is at the top of the page
+                $(window).on("scroll", function () {
+                    var scrollTop = $(window).scrollTop();
+                    // If we're at the top of the page (within 100px), ensure Home is active
+                    if (scrollTop < 100) {
+                        $(".nav a").removeClass("active");
+                        $(".nav a[href=\"#hero\"]").addClass("active");
+                    }
                 });
             }
 
