@@ -26,6 +26,14 @@
   filter: invert(57%) sepia(7%) saturate(745%) hue-rotate(15deg) brightness(94%) contrast(86%);
 }
 
+/* Color inheritance for wedding icons in wedding-gifts context - white icons */
+.wedding-gifts [class^="wedding-icon-"]:before,
+.wedding-gifts [class*=" wedding-icon-"]:before,
+#giftregistry [class^="wedding-icon-"]:before,
+#giftregistry [class*=" wedding-icon-"]:before {
+  filter: brightness(0) invert(1);
+}
+
 /* Wedding Icon 1 - Wedding Couple */
 .wedding-icon-couple:before {
   background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon1.svg");

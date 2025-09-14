@@ -1,10 +1,3 @@
-/*
-* Author: Wisely Themes
-* Author URI: http://www.wiselythemes.com
-* Theme Name: Neela
-* Version: 1.0.1
-*/
-
 /*jslint browser:true, devel: true, this: true, long: true, unordered: true */
 /*global google, window, RichMarker, jQuery, mobile_menu_title, hero_full_screen, slidehow_images, timeline_parallax, map_color, map_initial_zoom, map_initial_latitude, map_initial_longitude, use_default_map_style, contact_form_success_msg, contact_form_error_msg, contact_form_recaptcha_error_msg, c_days, c_hours, c_minutes, c_seconds, countdown_end_msg, Waypoint, Freewall, map_markers, lightbox, onepage_nav, rtl, grecaptcha  */
 
@@ -851,11 +844,86 @@ var Neela;
 
             var $_self = this;
 
+            // Handle Formspree forms with their recommended approach
+            $('form[action*="formspree.io"]').on('submit', function(e) {
+                e.preventDefault();
+
+                var form = this;
+                var $form = $(form);
+                var $submit_btn = $form.find('.submit_form');
+                var $status = $form.find('.form_status_message');
+                var formData = new FormData(form);
+
+                // Basic validation
+                var isValid = true;
+                $form.find('[required]').each(function() {
+                    var $field = $(this);
+                    if ($field.attr('type') === 'radio') {
+                        if (!$('input[name="' + $field.attr('name') + '"]:checked').length) {
+                            $field.addClass('is-invalid');
+                            isValid = false;
+                        } else {
+                            $field.removeClass('is-invalid');
+                        }
+                    } else if (!$field.val().trim()) {
+                        $field.addClass('is-invalid');
+                        isValid = false;
+                    } else {
+                        $field.removeClass('is-invalid');
+                    }
+                });
+
+                if (!isValid) {
+                    $status.html("<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">Please fill in all required fields.<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>");
+                    return false;
+                }
+
+                // Show loading state
+                $submit_btn.append("<i class=\"fas fa-spinner fa-spin after\"></i>");
+                $submit_btn.addClass("disabled");
+                $status.html("");
+
+                // Use fetch as recommended by Formspree
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(function(response) {
+                    // Remove loading state
+                    $(".fa-spinner", $submit_btn).remove();
+                    $submit_btn.removeClass("disabled");
+
+                    if (response.ok) {
+                        $status.html("<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">Thank you for your response!<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>");
+                        form.reset();
+                        $form.find('.is-invalid').removeClass('is-invalid');
+                    } else {
+                        response.json().then(function(data) {
+                            var errorMessage = "Sorry, there was an error sending your RSVP. Please try again or contact us directly.";
+                            if (data && data.errors) {
+                                errorMessage = data.errors.map(function(error) { return error.message; }).join(", ");
+                            }
+                            $status.html("<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">" + errorMessage + "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>");
+                        }).catch(function() {
+                            $status.html("<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">Sorry, there was an error sending your RSVP. Please try again or contact us directly.<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>");
+                        });
+                    }
+                }).catch(function() {
+                    // Remove loading state
+                    $(".fa-spinner", $submit_btn).remove();
+                    $submit_btn.removeClass("disabled");
+
+                    $status.html("<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">Sorry, there was an error sending your RSVP. Please try again or contact us directly.<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>");
+                });
+            });
+
             $(".submit_form").on("click", function (e) {
-                // For Formspree integration, let the form submit naturally
+                // For Formspree forms, the submit event handler above will handle it
                 var $form = $(this).closest('form');
                 if ($form.attr('action').includes('formspree.io')) {
-                    return true; // Let browser handle the submission
+                    return; // Let the form submit event handler take over
                 }
 
                 var $submit_btn = $(this);

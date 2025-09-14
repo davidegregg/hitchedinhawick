@@ -3975,6 +3975,14 @@ section.side-flowers{
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center center;
+
+	.title-fancy-lg {
+		color: #fff !important;
+	}
+
+	.section-desc {
+		color: #fff;
+	}
 }
 
 .wedding-gifts{
@@ -3986,28 +3994,32 @@ section.side-flowers{
 	li{
 		position:relative;
 		display:block;
-		color:$color;
-		background-color:#fff;
+		color:#fff;
+		background-color:transparent;
 		padding:35px;
 		margin-bottom:35px;
+
+		&#help-honeymoon .neela-style{
+			background-color:rgba($color, 0.7);
+		}
 
 		.neela-style{
 			--offset: 7px;
 			--border-size: 1px;
-			color:$color;
+			color:#fff;
 			position: relative;
 			padding: 32px;
 			z-index:0;
 
 			.h-lines {
-				border-top-color:rgba($color, 0.5);
-				border-bottom-color:rgba($color, 0.5);
+				border-top-color:rgba(255, 255, 255, 0.5);
+				border-bottom-color:rgba(255, 255, 255, 0.5);
 				@include transition(all 0.3s ease-out);
 			}
 
 			.v-lines {
-				border-left-color:rgba($color, 0.5);
-				border-right-color:rgba($color, 0.5);
+				border-left-color:rgba(255, 255, 255, 0.5);
+				border-right-color:rgba(255, 255, 255, 0.5);
 				@include transition(all 0.3s ease-out);
 			}
 		}
@@ -4023,8 +4035,10 @@ section.side-flowers{
 			width: 20%;
 			text-align: right;
 			margin-right: 7%;
+			color: #fff;
 			@include opacity(0.5);
 			@include transition(all 0.3s ease-out);
+
 		}
 
 		h3{
@@ -4036,6 +4050,7 @@ section.side-flowers{
 			width: 71%;
 			font-size:26pt;
 			font-family:$highlight-ff;
+			color:#fff;
 			@include transition(all 0.3s ease-out);
 		}
 
@@ -4047,6 +4062,7 @@ section.side-flowers{
 			top:-40px;
 			text-align:center;
 			max-height:0;
+			color:#fff;
 
 			img{
 				background:rgba(255,255,255, 0.15);
@@ -4058,6 +4074,16 @@ section.side-flowers{
 
 			.btn{
 				margin:20px 10px;
+				color: #fff;
+				border-color: #fff;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background: rgba(255, 255, 255, 0.2);
+					border-color:#fff;
+					color: #fff;
+				}
 			}
 		}
 
@@ -4066,13 +4092,13 @@ section.side-flowers{
 				height: auto;
 
 				.h-lines {
-					border-top-color:$color;
-					border-bottom-color:$color;
+					border-top-color:#fff;
+					border-bottom-color:#fff;
 				}
 
 				.v-lines {
-					border-left-color:$color;
-					border-right-color:$color;
+					border-left-color:#fff;
+					border-right-color:#fff;
 				}
 			}
 
