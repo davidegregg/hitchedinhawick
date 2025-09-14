@@ -4051,6 +4051,7 @@ section.side-flowers{
 			font-size:26pt;
 			font-family:$highlight-ff;
 			color:#fff;
+			margin-bottom: 10px;
 			@include transition(all 0.3s ease-out);
 		}
 
@@ -4059,7 +4060,7 @@ section.side-flowers{
 			z-index:2;
 			@include opacity(0);
 			@include transition(all 0.3s ease);
-			top:-40px;
+			top:-20px;
 			text-align:center;
 			max-height:0;
 			color:#fff;
@@ -4104,7 +4105,7 @@ section.side-flowers{
 
 			.info{
 				@include opacity(1);
-				top:20px;
+				top:5px;
 				float:none;
 				max-height:500px;
 			}
@@ -6252,11 +6253,12 @@ textarea.form-control{
 		.description-wrapper{
 			grid-column: 2 / 24;
 			grid-row: 2;
-			margin-top: 25px;
+			margin-top: -30px;
 		}
 
 		.timeline-gallery-wrapper{
 			grid-column: 1 / -1;
+			margin-bottom: 10px;
 		}
 
 		&:hover .description{
@@ -6269,11 +6271,18 @@ textarea.form-control{
 		.description-wrapper{
 			grid-column: 2 / 24;
 			grid-row: 2;
-			margin-top: 25px;
+			margin-top: 20px;
+			text-align: center;
 		}
 
 		.timeline-image-wrapper{
 			grid-column: 1 / -1;
+
+			img{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
 		}
 
 		&:hover .description{
@@ -6540,6 +6549,13 @@ textarea.form-control{
 
 	}
 
+	.gallery-container-flipped {
+		.description-wrapper{
+			grid-column: 2 / span 20;
+			margin-top: 15%;
+		}
+	}
+
 	.widget-about .image-container{
 		margin: 0 100px;
 	}
@@ -6633,7 +6649,7 @@ textarea.form-control{
 	.timeline{
 		.template-1 {
 			.date{
-				top:18px;
+				top: -30px;
 				right: 4%;
 
 				.neela-style{
@@ -6644,15 +6660,15 @@ textarea.form-control{
 			.description-wrapper{
 				grid-column: 2 / 24;
 				grid-row: 2;
-				margin-top: -5%;
+				margin-top: 15px;
 			}
 		}
 
 
 		.template-2{
 			.date{
-				top: 70px;
-				left: 3%;
+				top: -30px;
+				left: 8%;
 				right: auto;
 				width: auto;
 			}
@@ -6663,19 +6679,10 @@ textarea.form-control{
 
 			}
 
-			.image-1 {
-				padding-top: 50%;
-			}
-
-			.image-2 {
-				grid-column: 2 / span 12;
-				padding-top:65%;
-			}
-
 			.description-wrapper{
 				grid-column: 2 / 24;
 				grid-row: 2;
-				margin-top: -5%;
+				margin-top: 15px;
 			}
 		}
 	}
@@ -6918,6 +6925,38 @@ textarea.form-control{
 			width:250px;
 		}
 	}
+
+	// Fix for honeymoon section on tablets/larger mobile
+	.wedding-gifts li {
+		.neela-style {
+			white-space: nowrap;
+			padding-left: 60px !important;
+
+			img {
+				width: 60px !important;
+				height: auto !important;
+				top: 0 !important;
+				left: 0 !important;
+				margin-right: 12px !important;
+				margin-bottom: 0 !important;
+				display: inline-block !important;
+				vertical-align: middle !important;
+			}
+		}
+
+		h3{
+			font-size: 18pt;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+		}
+
+		.info {
+			text-align: center !important;
+			margin-left: -30px !important;
+			padding-left: 0 !important;
+		}
+	}
 }
 
 @media (max-width: 480px) {
@@ -7008,9 +7047,9 @@ textarea.form-control{
 
 		.template-2 {
 			.date{
-				top: 50px;
+				top: -30px;
 				padding: 20px 16px;
-				left: 3%;
+				left: 8%;
 				right: auto;
 				width: auto;
 
@@ -7051,8 +7090,34 @@ textarea.form-control{
 			top: 3px;
 		}
 
+		// Fix for honeymoon section img icon on mobile - force same line with nowrap
+		.neela-style {
+			white-space: nowrap;
+			padding-left: 50px !important;
+
+			img {
+				width: 45px !important;
+				height: auto !important;
+				top: 0 !important;
+				left: 0 !important;
+				margin-right: 10px !important;
+				margin-bottom: 0 !important;
+				display: inline-block !important;
+				vertical-align: middle !important;
+			}
+		}
+
 		h3{
-			font-size: 14pt;
+			font-size: 16pt;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+		}
+
+		.info {
+			text-align: center !important;
+			margin-left: -25px !important;
+			padding-left: 0 !important;
 		}
 	}
 

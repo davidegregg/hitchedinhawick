@@ -3573,6 +3573,7 @@ section.side-flowers {
   font-size: 26pt;
   font-family: "Playfair Display", serif;
   color: #fff;
+  margin-bottom: 10px;
   transition: all 0.3s ease-out;
 }
 .wedding-gifts li .info {
@@ -3582,7 +3583,7 @@ section.side-flowers {
   -moz-opacity: 0;
   opacity: 0;
   transition: all 0.3s ease;
-  top: -40px;
+  top: -20px;
   text-align: center;
   max-height: 0;
   color: #fff;
@@ -3619,7 +3620,7 @@ section.side-flowers {
   -khtml-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
-  top: 20px;
+  top: 5px;
   float: none;
   max-height: 500px;
 }
@@ -5570,10 +5571,11 @@ textarea.form-control {
   .gallery-container .description-wrapper {
     grid-column: 2/24;
     grid-row: 2;
-    margin-top: 25px;
+    margin-top: -30px;
   }
   .gallery-container .timeline-gallery-wrapper {
     grid-column: 1/-1;
+    margin-bottom: 10px;
   }
   .gallery-container:hover .description {
     transform: none;
@@ -5581,10 +5583,16 @@ textarea.form-control {
   .gallery-container-flipped .description-wrapper {
     grid-column: 2/24;
     grid-row: 2;
-    margin-top: 25px;
+    margin-top: 20px;
+    text-align: center;
   }
   .gallery-container-flipped .timeline-image-wrapper {
     grid-column: 1/-1;
+  }
+  .gallery-container-flipped .timeline-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .gallery-container-flipped:hover .description {
     transform: none;
@@ -5773,6 +5781,10 @@ textarea.form-control {
     right: auto;
     width: auto;
   }
+  .gallery-container-flipped .description-wrapper {
+    grid-column: 2/span 20;
+    margin-top: 15%;
+  }
   .widget-about .image-container {
     margin: 0 100px;
   }
@@ -5837,7 +5849,7 @@ textarea.form-control {
     color: #73777b;
   }
   .timeline .template-1 .date {
-    top: 18px;
+    top: -30px;
     right: 4%;
   }
   .timeline .template-1 .date .neela-style {
@@ -5846,11 +5858,11 @@ textarea.form-control {
   .timeline .template-1 .description-wrapper {
     grid-column: 2/24;
     grid-row: 2;
-    margin-top: -5%;
+    margin-top: 15px;
   }
   .timeline .template-2 .date {
-    top: 70px;
-    left: 3%;
+    top: -30px;
+    left: 8%;
     right: auto;
     width: auto;
   }
@@ -5858,17 +5870,10 @@ textarea.form-control {
     grid-column: 1/span 16;
     grid-row: 1;
   }
-  .timeline .template-2 .image-1 {
-    padding-top: 50%;
-  }
-  .timeline .template-2 .image-2 {
-    grid-column: 2/span 12;
-    padding-top: 65%;
-  }
   .timeline .template-2 .description-wrapper {
     grid-column: 2/24;
     grid-row: 2;
-    margin-top: -5%;
+    margin-top: 15px;
   }
   .timeline_footer .punchline {
     font-size: 44pt;
@@ -6052,6 +6057,31 @@ textarea.form-control {
     height: 250px;
     width: 250px;
   }
+  .wedding-gifts li .neela-style {
+    white-space: nowrap;
+    padding-left: 60px !important;
+  }
+  .wedding-gifts li .neela-style img {
+    width: 60px !important;
+    height: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-right: 12px !important;
+    margin-bottom: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+  .wedding-gifts li h3 {
+    font-size: 18pt;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .wedding-gifts li .info {
+    text-align: center !important;
+    margin-left: -30px !important;
+    padding-left: 0 !important;
+  }
 }
 @media (max-width: 480px) {
   .hero-wrapper::before {
@@ -6115,9 +6145,9 @@ textarea.form-control {
     padding: 6px 10px;
   }
   .timeline .template-2 .date {
-    top: 50px;
+    top: -30px;
     padding: 20px 16px;
-    left: 3%;
+    left: 8%;
     right: auto;
     width: auto;
   }
@@ -6144,8 +6174,30 @@ textarea.form-control {
     font-size: 28pt;
     top: 3px;
   }
+  .wedding-gifts li .neela-style {
+    white-space: nowrap;
+    padding-left: 50px !important;
+  }
+  .wedding-gifts li .neela-style img {
+    width: 45px !important;
+    height: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-right: 10px !important;
+    margin-bottom: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
   .wedding-gifts li h3 {
-    font-size: 14pt;
+    font-size: 16pt;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .wedding-gifts li .info {
+    text-align: center !important;
+    margin-left: -25px !important;
+    padding-left: 0 !important;
   }
   .form-wrapper {
     padding: 20px 25px;
