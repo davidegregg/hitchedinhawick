@@ -141,16 +141,6 @@
 									Please confirm your attendance<br>on or before February 1<sup>st</sup> 2026
 								</blockquote>
 								
-								<ul class="contact-info">
-									<li><span>Phone:</span> +0012 345-6789-101</li>
-									<li><span>E-mail:</span> <a href="mailto:isabella.andrew@example.com">isabella.andrew@example.com</a></li>
-								</ul>
-								
-								<ul class="sn-icons">
-									<li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-									<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-								</ul>
 							</div>
 							
 							<!-- BEGIN CONTACT FORM -->
@@ -158,86 +148,59 @@
 								<div class="form-wrapper no-shadow overflow neela-style">
 									<h2 class="section-title">Will you Attend?</h2>
 									
-									<form id="form-rsvp" method="post" action="#">
+									<form id="form-rsvp" method="post" action="https://formspree.io/f/mandkavb">
 										
 										<div class="form-floating">
-											<input type="text" name="Name" id="name" placeholder="Your Name*" class="form-control required fromName">
+											<input type="text" name="name" id="name" placeholder="Your Name*" class="form-control" required>
 											<label for="name">Your Name*</label>
-										</div>
-										
-										<div class="form-floating">
-											<input type="email" name="E-mail" id="email" placeholder="E-mail*" class="form-control required fromEmail">
-											<label for="email">E-mail*</label>
 										</div>
 										
 										<div class="form-check-wrapper">
 											<div class="form-check form-check-inline">
-												<input class="form-check-input required" type="radio" name="Attend wedding" id="attend_wedding_yes">
+												<input class="form-check-input" type="radio" name="attendance" id="attend_wedding_yes" value="Yes, I will attend" required>
 												<label for="attend_wedding_yes">Yes, I will attend.</label>
 											</div>
 											
 											<div class="form-check form-check-inline">
-												<input class="form-check-input required" type="radio" name="Attend wedding" id="attend_wedding_no">
+												<input class="form-check-input" type="radio" name="attendance" id="attend_wedding_no" value="Sorry, I can't come" required>
 												<label for="attend_wedding_no">Sorry, I can't come.</label>
 											</div>
 										</div>
 										
 										<div class="form-floating">
-											<select class="form-select" aria-label="Number of guests" name="Number of Guests" id="num_guests">
-												<option value="0">0</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option>
+											<select class="form-select" aria-label="Starter choice" name="starter" id="starter_choice" required>
+												<option value="">Please select your starter</option>
+												<option value="Leek & potato soup">Leek & potato soup</option>
+												<option value="Baked Camembert">Baked Camembert with seed sprinkle, cranberry, chutney & oatcakes</option>
 											</select>
-											
-											<label for="num_guests">Number of guests</label>
+											<label for="starter_choice">Starter Choice</label>
+										</div>
+
+										<div class="form-floating">
+											<select class="form-select" aria-label="Main course choice" name="main" id="main_choice" required>
+												<option value="">Please select your main course</option>
+												<option value="British beef Wellington">British Beef Wellington with rich wine sauce</option>
+												<option value="Chicken mozzarella & parma ham">Chicken mozzarella & parma ham with roasted vine tomato & olive sauce</option>
+												<option value="Gnocchi with mushroom ragu">Gnocchi with mushroom and rosemary ragu</option>
+												<option value="Plain chicken breast">Plain chicken breast</option>
+											</select>
+											<label for="main_choice">Main Course Choice</label>
+										</div>
+
+										<div class="form-floating">
+											<textarea id="allergies" name="allergies" placeholder="Allergies and dietary requirements" class="form-control" rows="3"></textarea>
+											<label for="allergies">Allergies and dietary requirements</label>
 										</div>
 										
-										<fieldset class="form-check-wrapper required" name="Meal Preferences" id="meal_pref">
-											<label>Meal Preferences:</label>
-											
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="meal_meat">
-												<label for="meal_meat">
-													Meat
-												</label>
-											</div>
-											
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="meal_fish">
-												<label for="meal_fish">
-													Fish
-												</label>
-											</div>
-											
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="meal_vegetarian">
-												<label for="meal_vegetarian">
-													Vegetarian
-												</label>
-											</div>
-											
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="meal_gluten_free">
-												<label for="meal_gluten_free">
-													Gluten free
-												</label>
-											</div>
-										</fieldset>
-										
 										<div class="form-floating">
-											<textarea id="message" name="Message" placeholder="Message" class="form-control" rows="4"></textarea>
+											<textarea id="message" name="message" placeholder="Message" class="form-control" rows="4"></textarea>
 											<label for="message">Message</label>
 										</div>
 										
 										<div class="form_status_message"></div>
 										
 										<div class="center">
-											<button type="submit" class="btn btn-primary submit_form">Send</button>
+											<button type="submit" class="btn btn-primary submit_form">Send RSVP</button>
 										</div>
 									</form>
 								</div>
@@ -269,9 +232,9 @@
 											<h3>Contribute to our<br>dream honeymoon</h3>
 											
 											<div class="info">
-												<a href="#" class="btn btn-primary reverse">$50</a>
-												<a href="#" class="btn btn-primary reverse">$100</a>
-												<a href="#" class="btn btn-primary reverse">$200</a>
+												<a href="#" class="btn btn-primary reverse">£20</a>
+												<a href="#" class="btn btn-primary reverse">£50</a>
+												<a href="#" class="btn btn-primary reverse">£100</a>
 												<br>
 												<a href="#" id="otheramount" class="btn btn-primary reverse">Other Amount</a>
 											</div>

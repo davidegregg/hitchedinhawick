@@ -103,11 +103,11 @@
 }
 
 #giftregistry {
-  background-image: url("../images/venue.jpg");
+  background-image: url("../images/hawaii.avif");
 }
 @media (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   #giftregistry {
-    background-image: url("../images/venue@2x.jpg");
+    background-image: url("../images/hawaii@2x.avif");
   }
 }
 
@@ -3418,6 +3418,8 @@ section.side-flowers {
   background-image: url(../images/flower-large.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
   opacity: 0.8;
 }
 .side-flowers-flipped::before {
@@ -4963,6 +4965,31 @@ textarea.form-control {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23808080' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 }
 
+#form-rsvp .form-select {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-select option {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-control {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-control::-webkit-input-placeholder {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-control:-moz-placeholder {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-control::-moz-placeholder {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp .form-control:-ms-input-placeholder {
+  font-family: "Nanum Myeongjo", serif;
+}
+#form-rsvp textarea.form-control {
+  font-family: "Nanum Myeongjo", serif;
+}
+
 .form-check-input:active {
   filter: none;
   background-color: rgba(146, 135, 119, 0.25);
@@ -6143,8 +6170,8 @@ textarea.form-control {
     position: absolute;
   }
 }
-
-/* FAQ Accordion Styling */
+/* FAQ Accordion Styling
+================================================== */
 .accordion .accordion-button {
   background-color: transparent;
   border: none;
@@ -6185,6 +6212,4 @@ textarea.form-control {
 }
 .accordion .accordion-item:last-child {
   border-bottom: 1px solid rgba(163, 184, 167, 0.2);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

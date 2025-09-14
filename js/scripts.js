@@ -852,6 +852,11 @@ var Neela;
             var $_self = this;
 
             $(".submit_form").on("click", function (e) {
+                // For Formspree integration, let the form submit naturally
+                var $form = $(this).closest('form');
+                if ($form.attr('action').includes('formspree.io')) {
+                    return true; // Let browser handle the submission
+                }
 
                 var $submit_btn = $(this);
                 var $form = $submit_btn.closest("form");
