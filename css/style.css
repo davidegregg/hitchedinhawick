@@ -356,6 +356,10 @@ section {
   z-index: 0;
 }
 
+#wedding-details {
+  padding-bottom: 0px;
+}
+
 .section-bg-color {
   background-color: #f9f9f9;
 }
@@ -2996,18 +3000,11 @@ p.center {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 .map-info-container::before {
-  content: "";
-  width: 1px;
-  height: calc(100% + 59px);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -1px;
-  background: #928777;
-  clear: both;
+  display: none;
 }
 .map-info-container .info-wrapper {
   grid-column: 1/span 9;
@@ -3385,7 +3382,7 @@ p.center {
   opacity: 1;
 }
 .side-flowers::before {
-  left: -354px;
+  left: -400px;
   transform: scaleX(-1) translateY(-50%) rotate(-60deg);
 }
 .side-flowers::after {
@@ -5622,6 +5619,9 @@ textarea.form-control {
   }
   .invite .invite_info .date {
     font-size: 20pt;
+  }
+  .map-info-container {
+    margin-top: 0;
   }
   .map-info-container .info-wrapper {
     grid-column: 5/-5;

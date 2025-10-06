@@ -34,6 +34,12 @@
   filter: brightness(0) invert(1);
 }
 
+/* Color inheritance for wedding icons in location-info context - white icons */
+.location-info [class^="wedding-icon-"]:before,
+.location-info [class*=" wedding-icon-"]:before {
+  filter: brightness(0) invert(1);
+}
+
 /* Wedding Icon 1 - Wedding Couple */
 .wedding-icon-couple:before {
   background-image: url("../images/NewWeddingIconsSetFiles/Wedding Icon1.svg");

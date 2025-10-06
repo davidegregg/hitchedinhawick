@@ -5,7 +5,9 @@
       "mcp__zen__thinkdeep",
       "Bash(grep:*)",
       "Bash(sed:*)",
-      "WebFetch(domain:www.branxholmpark.co.uk)"
+      "WebFetch(domain:www.branxholmpark.co.uk)",
+      "Bash(sass:*)",
+      "Read(///**)"
     ],
     "deny": [],
     "ask": []
