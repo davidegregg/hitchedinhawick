@@ -118,6 +118,11 @@ var Neela;
             * Initiate Parallax
             */
             $_self.parallaxBg();
+
+            /**
+            * Set Spotify playlist links
+            */
+            $_self.spotifyPlaylist();
         },
 
         events: function () {
@@ -751,6 +756,15 @@ var Neela;
                     }, 1000);
                 });
             }
+        },
+
+        spotifyPlaylist: function () {
+
+            if (typeof spotify_playlist_url === "undefined" || !spotify_playlist_url) {
+                return;
+            }
+
+            $("a.spotify-playlist").attr("href", spotify_playlist_url);
         },
 
         parallaxBg: function () {
