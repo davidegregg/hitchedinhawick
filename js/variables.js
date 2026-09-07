@@ -6,7 +6,7 @@
 //Collaborator invite link, used by the "Playlist" buttons in the page footers.
 //Spotify expires these after 7 days: regenerate via "Invite collaborators" in
 //the Spotify app, then paste the new link below. This is the only place it lives.
-var spotify_playlist_url = "https://open.spotify.com/playlist/3pMOsoULoLqtxyqJdREOfK?si=xXgHUZQnQlG0GFl_kge6Lg&utm_source=copy-link&pt=c984871b78632f4b917a084cb1b657b1&pi=D4jQwVPJRf6Pz";
+var spotify_playlist_url = "https://open.spotify.com/playlist/3pMOsoULoLqtxyqJdREOfK?si=5unGCIGPTjiIzzXMZCj9mQ&utm_source=copy-link&pi=22dDYMRWRmiMo&pt=ad673704538f55f313e1f4557e97b88d";
 
 //RTL support
 var rtl = false;                                //Set to true if your website is RTL. Otherwise, keep it false.
